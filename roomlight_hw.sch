@@ -691,11 +691,11 @@ Text Label 7250 1800 0    50   ~ 0
 ESP_GPIO0
 Text Label 7250 2000 0    50   ~ 0
 ESP_GPIO2
-Text Label 6400 1900 0    50   ~ 0
+Text Label 7200 5950 2    50   ~ 0
 UART1_RX
 Wire Wire Line
 	6400 1900 6350 1900
-Text Label 6400 2100 0    50   ~ 0
+Text Label 7200 5850 2    50   ~ 0
 UART1_TX
 Wire Wire Line
 	6400 2100 6350 2100
@@ -1155,9 +1155,9 @@ S 3650 5550 800  250
 U 5F277E83
 F0 "mosfet1" 50
 F1 "mosfet.sch" 50
-F2 "LOAD" I R 4450 5650 50 
-F3 "Enable" I L 3650 5750 50 
-F4 "Voltage_In" I L 3650 5600 50 
+F2 "Enable" I L 3650 5750 50 
+F3 "Voltage_In" I L 3650 5600 50 
+F4 "LOAD" O R 4450 5650 50 
 $EndSheet
 Wire Notes Line
 	4400 5200 8000 5200
@@ -1182,18 +1182,18 @@ S 3650 6050 800  250
 U 5F220C8C
 F0 "mosfet2" 50
 F1 "mosfet.sch" 50
-F2 "LOAD" I R 4450 6150 50 
-F3 "Enable" I L 3650 6250 50 
-F4 "Voltage_In" I L 3650 6100 50 
+F2 "Enable" I L 3650 6250 50 
+F3 "Voltage_In" I L 3650 6100 50 
+F4 "LOAD" O R 4450 6150 50 
 $EndSheet
 $Sheet
 S 3650 6550 800  250 
 U 5F22CDBC
 F0 "mosfet3" 50
 F1 "mosfet.sch" 50
-F2 "LOAD" I R 4450 6650 50 
-F3 "Enable" I L 3650 6750 50 
-F4 "Voltage_In" I L 3650 6600 50 
+F2 "Enable" I L 3650 6750 50 
+F3 "Voltage_In" I L 3650 6600 50 
+F4 "LOAD" O R 4450 6650 50 
 $EndSheet
 Wire Wire Line
 	2200 6600 3100 6600
@@ -1508,9 +1508,9 @@ Text Notes 650  650  0    50   ~ 0
 MCU
 Text Notes 7850 2300 0    50   ~ 0
 voltage divider
-Text Label 3600 3150 0    50   ~ 0
-CURRENT_ADC
 Text Label 3600 3250 0    50   ~ 0
+CURRENT_ADC
+Text Label 3600 3150 0    50   ~ 0
 VOLTAGE_ADC
 Wire Wire Line
 	3600 3450 3550 3450
@@ -1522,9 +1522,9 @@ Wire Wire Line
 	3600 4050 3550 4050
 Wire Wire Line
 	3550 4150 3600 4150
-Text Label 2200 4550 2    50   ~ 0
+Text Label 2200 4150 2    50   ~ 0
 ESP_RST
-Text Label 2200 4650 2    50   ~ 0
+Text Label 2200 4250 2    50   ~ 0
 ESP_EN
 Text Label 2200 2950 2    50   ~ 0
 EN_MOS1
@@ -1538,41 +1538,25 @@ Wire Wire Line
 	2250 2850 2200 2850
 Wire Wire Line
 	2200 2950 2250 2950
-Text Label 2200 4450 2    50   ~ 0
-ESP_GPIO0
-Text Label 2200 4350 2    50   ~ 0
-ESP_GPIO2
-Text Label 2200 4250 2    50   ~ 0
-LED_GREEN3
-Text Label 2200 3250 2    50   ~ 0
-LED_RED
 Text Label 2200 3350 2    50   ~ 0
+ESP_GPIO0
+Text Label 2200 3250 2    50   ~ 0
+ESP_GPIO2
+Text Label 3600 3850 0    50   ~ 0
+LED_GREEN3
+Text Label 3600 3550 0    50   ~ 0
+LED_RED
+Text Label 3600 3650 0    50   ~ 0
 LED_GREEN1
-Text Label 2200 4150 2    50   ~ 0
+Text Label 3600 3750 0    50   ~ 0
 LED_GREEN2
-Wire Wire Line
-	2200 4650 2250 4650
-Wire Wire Line
-	2250 4550 2200 4550
-Wire Wire Line
-	2200 4450 2250 4450
-Wire Wire Line
-	2250 4350 2200 4350
-Wire Wire Line
-	2200 3250 2250 3250
-Wire Wire Line
-	2250 3350 2200 3350
-Wire Wire Line
-	2200 4250 2250 4250
-Wire Wire Line
-	2250 4150 2200 4150
-Text Label 2200 3850 2    50   ~ 0
-Touch
 Text Label 2200 3750 2    50   ~ 0
-SW_RED
+Touch
 Text Label 2200 3650 2    50   ~ 0
-SW_GREEN
+SW_RED
 Text Label 2200 3550 2    50   ~ 0
+SW_GREEN
+Text Label 3600 4650 0    50   ~ 0
 SW_BLUE
 Wire Wire Line
 	2200 3550 2250 3550
@@ -1605,7 +1589,7 @@ F 1 "LOADs" H 6700 5750 50  0000 L CNN
 F 2 "extraFootprints:DG306-5.0-03" H 6700 5950 50  0001 C CNN
 F 3 "~" H 6700 5950 50  0001 C CNN
 	1    6700 5950
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 Text Label 6400 5850 2    50   ~ 0
 LOAD1
@@ -1629,15 +1613,15 @@ Wire Wire Line
 	3600 3350 3550 3350
 Text Label 3600 3450 0    50   ~ 0
 UART2_RX
-Text Label 7200 5850 2    50   ~ 0
+Text Label 6400 1900 0    50   ~ 0
 UART2_RX
-Text Label 7200 5950 2    50   ~ 0
+Text Label 6400 2100 0    50   ~ 0
 UART2_TX
-Text Label 3600 3650 0    50   ~ 0
+Text Label 2200 3850 2    50   ~ 0
 DATA1
-Text Label 3600 3750 0    50   ~ 0
+Text Label 2200 3950 2    50   ~ 0
 DATA2
-Text Label 3600 3850 0    50   ~ 0
+Text Label 2200 4050 2    50   ~ 0
 DATA3
 Wire Wire Line
 	3600 3850 3550 3850
@@ -1645,13 +1629,9 @@ Wire Wire Line
 	3550 3750 3600 3750
 Wire Wire Line
 	3600 3650 3550 3650
-NoConn ~ 3550 3550
 NoConn ~ 3550 3950
 NoConn ~ 3550 4250
 NoConn ~ 3550 4350
-NoConn ~ 3550 4650
-NoConn ~ 2250 3950
-NoConn ~ 2250 4050
 NoConn ~ 2250 3150
 $Comp
 L Connector:Conn_01x06_Male J6
@@ -1888,4 +1868,74 @@ Text Label 8750 5900 2    50   ~ 0
 SW_RED
 Text Label 8750 6200 2    50   ~ 0
 Touch
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F33C7CD
+P 9550 800
+F 0 "H1" H 9650 846 50  0000 L CNN
+F 1 "MountingHole" H 9650 755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 9550 800 50  0001 C CNN
+F 3 "~" H 9550 800 50  0001 C CNN
+	1    9550 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F33CA20
+P 9550 1050
+F 0 "H2" H 9650 1096 50  0000 L CNN
+F 1 "MountingHole" H 9650 1005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 9550 1050 50  0001 C CNN
+F 3 "~" H 9550 1050 50  0001 C CNN
+	1    9550 1050
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	9450 700  9450 1200
+Wire Notes Line
+	9450 1200 10200 1200
+Wire Notes Line
+	10200 1200 10200 700 
+Wire Notes Line
+	10200 700  9450 700 
+Text Notes 9450 650  0    50   ~ 0
+PCB mounting holes
+Text Label 1900 6150 3    50   ~ 0
+IN+
+Text Label 2100 6150 3    50   ~ 0
+IN-
+Wire Wire Line
+	3600 4650 3550 4650
+Wire Wire Line
+	2250 4050 2200 4050
+Wire Wire Line
+	2250 3950 2200 3950
+Wire Wire Line
+	3600 3550 3550 3550
+Wire Wire Line
+	2250 4150 2200 4150
+Wire Wire Line
+	2200 4250 2250 4250
+Wire Wire Line
+	2200 3350 2250 3350
+Wire Wire Line
+	2250 3250 2200 3250
+NoConn ~ 2250 4350
+NoConn ~ 2250 4450
+NoConn ~ 2250 4550
+NoConn ~ 2250 4650
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F31C560
+P 3100 5450
+F 0 "#FLG0101" H 3100 5525 50  0001 C CNN
+F 1 "PWR_FLAG" H 3100 5623 50  0000 C CNN
+F 2 "" H 3100 5450 50  0001 C CNN
+F 3 "~" H 3100 5450 50  0001 C CNN
+	1    3100 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5450 3100 5600
+Connection ~ 3100 5600
 $EndSCHEMATC

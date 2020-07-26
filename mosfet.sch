@@ -46,24 +46,6 @@ F 3 "https://www.infineon.com/dgdl/irf8734pbf.pdf?fileId=5546d462533600a40153560
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R14
-U 1 1 5F27B9C2
-P 5550 3200
-AR Path="/5F277E83/5F27B9C2" Ref="R14"  Part="1" 
-AR Path="/5F28697D/5F27B9C2" Ref="R?"  Part="1" 
-AR Path="/5F292969/5F27B9C2" Ref="R?"  Part="1" 
-AR Path="/5F220C8C/5F27B9C2" Ref="R15"  Part="1" 
-AR Path="/5F22CDBC/5F27B9C2" Ref="R16"  Part="1" 
-F 0 "R14" V 5343 3200 50  0000 C CNN
-F 1 "10R" V 5434 3200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5480 3200 50  0001 C CNN
-F 3 "~" H 5550 3200 50  0001 C CNN
-	1    5550 3200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5750 3200 5700 3200
-$Comp
 L power:GND #PWR033
 U 1 1 5F27CECC
 P 4450 3600
@@ -72,7 +54,7 @@ AR Path="/5F28697D/5F27CECC" Ref="#PWR?"  Part="1"
 AR Path="/5F292969/5F27CECC" Ref="#PWR?"  Part="1" 
 AR Path="/5F220C8C/5F27CECC" Ref="#PWR035"  Part="1" 
 AR Path="/5F22CDBC/5F27CECC" Ref="#PWR037"  Part="1" 
-F 0 "#PWR033" H 4450 3350 50  0001 C CNN
+F 0 "#PWR037" H 4450 3350 50  0001 C CNN
 F 1 "GND" H 4455 3427 50  0000 C CNN
 F 2 "" H 4450 3600 50  0001 C CNN
 F 3 "" H 4450 3600 50  0001 C CNN
@@ -85,22 +67,6 @@ Wire Wire Line
 	4450 3450 4500 3450
 Wire Wire Line
 	6050 2950 6050 3000
-$Comp
-L power:+24V #PWR032
-U 1 1 5F27D3C9
-P 4450 3100
-AR Path="/5F277E83/5F27D3C9" Ref="#PWR032"  Part="1" 
-AR Path="/5F28697D/5F27D3C9" Ref="#PWR?"  Part="1" 
-AR Path="/5F292969/5F27D3C9" Ref="#PWR?"  Part="1" 
-AR Path="/5F220C8C/5F27D3C9" Ref="#PWR034"  Part="1" 
-AR Path="/5F22CDBC/5F27D3C9" Ref="#PWR036"  Part="1" 
-F 0 "#PWR032" H 4450 2950 50  0001 C CNN
-F 1 "+24V" H 4465 3273 50  0000 C CNN
-F 2 "" H 4450 3100 50  0001 C CNN
-F 3 "" H 4450 3100 50  0001 C CNN
-	1    4450 3100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4500 3250 4450 3250
 Wire Wire Line
@@ -125,15 +91,13 @@ Wire Wire Line
 	4000 3200 4000 3150
 Connection ~ 4450 3150
 Wire Wire Line
-	4450 3150 4450 3100
-Wire Wire Line
 	4000 3500 4000 3550
 Wire Wire Line
 	4000 3550 4450 3550
 Connection ~ 4450 3550
 Wire Wire Line
 	4450 3550 4450 3450
-Text HLabel 6050 3550 3    50   Input ~ 0
+Text HLabel 6050 3550 3    50   Output ~ 0
 LOAD
 Text HLabel 4450 3350 0    50   Input ~ 0
 Enable
@@ -143,8 +107,6 @@ Wire Wire Line
 	5300 3250 5350 3250
 Wire Wire Line
 	5350 3250 5350 3200
-Wire Wire Line
-	5350 3200 5400 3200
 Connection ~ 6050 3450
 Wire Wire Line
 	6050 3450 6050 3400
@@ -182,4 +144,10 @@ Wire Wire Line
 	4000 3150 4450 3150
 Text HLabel 6050 2950 1    50   Input ~ 0
 Voltage_In
+Wire Wire Line
+	5350 3200 5750 3200
+Text HLabel 4450 3050 1    50   Input ~ 0
+Voltage_In
+Wire Wire Line
+	4450 3050 4450 3150
 $EndSCHEMATC
